@@ -1,11 +1,19 @@
-import { createStore } from "redux";
+import { createStore, applyMiddleware } from "redux";
 import reducer from "../reducers";
+import logger from "redux-logger";
 
-const initialState = { 
-    name: "Zack Dinerstein",
-    location: "Tel Aviv",
-    description: "React Developer, Teacher, and occasional Rock Climber",
-    likes: "Bluegrass",
+// this is better to write in capitals
+export const INITIAL_STATE = {
+  name: "Zack Dinerstein",
+  location: "Tel Aviv",
+  description: "React Developer, Teacher, and occasional Rock Climber",
+  likes: "Bluegrass"
 };
 
-export const store = createStore(reducer, initialState);
+// not required, but when you go to Console -> you'll love it.
+// NB: This should be used only on DEV version
+export const store = createStore(
+  reducer,
+  INITIAL_STATE,
+  applyMiddleware(logger)
+);
