@@ -1,10 +1,11 @@
 export default (state, action) => {
 
+    
     switch (action.type) {
-      case "SET_NAME":
+        case "SET_NAME":
         return {
           ...state,
-          name: action.text
+          name: action.newName
         };
   
       default:

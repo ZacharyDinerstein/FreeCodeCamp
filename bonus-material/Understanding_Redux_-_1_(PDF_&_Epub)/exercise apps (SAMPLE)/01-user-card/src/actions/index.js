@@ -1,3 +1,3 @@
-export const setTechnology = text => {
-    return ({ type: "SET_TECHNOLOGY", text }) 
+export const setName = newName => {
+    return ({ type: "SET_NAME", newName }) 
 };
