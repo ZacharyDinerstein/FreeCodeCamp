@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import formatNumber from "format-number";
 import photographer from "./images/girl.png";
+import { store } from "./store";
+import { updateAmount } from './actions';
 import "./App.css";
 
 class App extends Component {
@@ -14,20 +16,16 @@ class App extends Component {
       newAmount = this.state.totalAmount;
 
     if (emptyaccount) {
-      this.setState({
-        totalAmount: 0
-      })
+      store.dispatch(updateAmount(0));
       return
     }
 
     newAmount -= parseInt(withdrawamount, 10);
-    this.setState({
-      totalAmount: newAmount
-    })
+    store.dispatch(updateAmount(newAmount));
   }
 
   render() {
-    const { totalAmount, username } = this.state;
+    const { totalAmount, username } = store.getState();
     return (
       <div className="App">
         <img className="App__userpic" src={photographer} alt="user" />
@@ -38,24 +36,15 @@ class App extends Component {
         </div>
 
         <section className="App__buttons">
-          <button 
-            data-withdrawamount="10000" 
-            onClick={this.handleWithdrawal} 
-            >
+          <button data-withdrawamount="10000" onClick={this.handleWithdrawal} >
               WITHDRAW $10,000
           </button>
-          <button 
-            data-withdrawamount="5000" 
-            onClick={this.handleWithdrawal} 
-            >
+          <button data-withdrawamount="5000" onClick={this.handleWithdrawal} >
               WITHDRAW $5,000
           </button>
         </section>
 
-        <p 
-          className="App__giveaway" 
-          data-emptyaccount="true" 
-          onClick={this.handleWithdrawal}>
+        <p className="App__giveaway" data-emptyaccount="true" onClick={this.handleWithdrawal}>
             Give away all your cash to charity
         </p>
       </div>
