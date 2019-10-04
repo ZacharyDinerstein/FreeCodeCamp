@@ -1,3 +1,3 @@
-export const setName = newName => {
-    return ({ type: "SET_CARD_VALUE", newName }) 
+export const updateCardData = (name, value) => {
+    return ({ type: "SET_CARD_VALUE", name, value })
 };

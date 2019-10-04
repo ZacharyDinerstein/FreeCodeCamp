@@ -3,7 +3,7 @@ import "./App.css";
 import { store } from "./store";
 import Card from "./components/Card/Card";
 import Form from "./components/Form/Form";
-import { setName } from './actions';
+import { updateCardData } from './actions';
 
 
 class App extends Component {
@@ -13,13 +13,12 @@ class App extends Component {
     const handleOnChange = (e) => {
       e.preventDefault();
 
-      const {value} = e.target;
-        
-      console.log(e.target.name);
-      store.dispatch(setName(value));
+      const { name, value } = e.target;
+
+      store.dispatch(updateCardData(name, value));
     }
 
-      return (
+    return (
       <div className="App">
         <Card data={cardData} />
         <Form data={cardData} handleOnChange={handleOnChange} />

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-const Form = (props) => {
+const Input = (props) => {
     const { name, location } = props.data,
         { handleOnChange } = props;
 
@@ -24,4 +24,4 @@ const Form = (props) => {
     )
 }
 
-export default Form;
+export default Input;
