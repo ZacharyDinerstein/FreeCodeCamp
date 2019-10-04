@@ -1,26 +1,19 @@
 import React, { Component } from "react";
 
 const Input = (props) => {
-    const { name, location } = props.data,
-        { handleOnChange } = props;
+    const { value, name, handleOnChange } = props,
+        upCaseName = name.charAt(0).toUpperCase() + name.substring(1);
 
     return (
-        <form onSubmit={(e) => e.preventDefault()}>
-            <label htmlFor="">Name</label>
-            <input 
-                onChange={handleOnChange} 
-                value={name} 
+        <div>
+            <label htmlFor="">{upCaseName}</label>
+            <input
+                onChange={handleOnChange}
+                value={value}
                 type="text"
-                name="name"
+                name={name}
             />
-            <label htmlFor="">Location</label>
-            <input 
-                onChange={handleOnChange} 
-                value={location} 
-                type="text"
-                name="location"
-            />
-        </form>
+        </div>
     )
 }
 

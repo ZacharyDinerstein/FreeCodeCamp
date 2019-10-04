@@ -1,25 +1,29 @@
 import React, { Component } from "react";
+import Input from "./Input";
+import { store } from "./../../store";
+import { updateCardData } from './../../actions';
 
-const Form = (props) => {
-    const { name, location } = props.data,
-        { handleOnChange } = props;
+const Form = () => {
+    const STATE = store.getState();
 
+    const handleOnChange = (e) => {
+        e.preventDefault();
+
+        const { name, value } = e.target;
+        store.dispatch(updateCardData(name, value));
+    }
+    
     return (
         <form onSubmit={(e) => e.preventDefault()}>
-            <label htmlFor="">Name</label>
-            <input 
-                onChange={handleOnChange} 
-                value={name} 
-                type="text"
-                name="name"
-            />
-            <label htmlFor="">Location</label>
-            <input 
-                onChange={handleOnChange} 
-                value={location} 
-                type="text"
-                name="location"
-            />
+            {Object.keys(STATE).map((key,index) => {
+                let item = STATE[key];
+                return <Input 
+                    value={item} 
+                    name={key} 
+                    handleOnChange={handleOnChange} 
+                    key={index}
+                />
+            })}
         </form>
     )
 }

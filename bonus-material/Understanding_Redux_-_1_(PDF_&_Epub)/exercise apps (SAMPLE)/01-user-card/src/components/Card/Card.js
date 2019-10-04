@@ -3,7 +3,6 @@ import user from "./../../images/user.png";
 
 const Card = (props) => {
     const { name, location, description, likes } = props.data;
-    console.log(name);
 
     return (
         <div className="card">
@@ -13,11 +12,9 @@ const Card = (props) => {
 
             <section className="User__info">
                 <p>
-                    {" "}
                     <span className="faint">I am</span> a {description}
                 </p>
                 <p>
-                    {" "}
                     <span className="faint">I like</span> {likes}
                 </p>
 
