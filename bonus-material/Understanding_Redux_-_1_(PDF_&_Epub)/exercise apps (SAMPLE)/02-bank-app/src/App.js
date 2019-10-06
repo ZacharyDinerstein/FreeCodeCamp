@@ -6,21 +6,17 @@ import { updateAmount } from './actions';
 import "./App.css";
 
 class App extends Component {
-  state = {
-    username: "Janny",
-    totalAmount: 2500701
-  };
-
   handleWithdrawal = (e) => {
-    let { withdrawamount, emptyaccount } = e.target.dataset,
-      newAmount = this.state.totalAmount;
+    const { withdrawamount, emptyaccount } = e.target.dataset,
+      { totalAmount } = store.getState();
+    let newAmount;
 
     if (emptyaccount) {
       store.dispatch(updateAmount(0));
       return
     }
 
-    newAmount -= parseInt(withdrawamount, 10);
+    newAmount = totalAmount - parseInt(withdrawamount, 10);
     store.dispatch(updateAmount(newAmount));
   }
 
