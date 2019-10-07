@@ -1,5 +1,5 @@
 Where we left off:
-https://www.freecodecamp.org/news/understanding-redux-the-worlds-easiest-guide-to-beginning-redux-c695f45546f6/#building-the-list-of-users
+https://www.freecodecamp.org/news/understanding-redux-the-worlds-easiest-guide-to-beginning-redux-c695f45546f6/#passing-the-sidebar-data-via-props
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
