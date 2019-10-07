@@ -14,6 +14,7 @@ class App extends Component {
   handleUpdateAmount = (e) => {
     let { howmuch, emptyaccount } = e.target.dataset,
       { totalAmount } = store.getState(),
+      { selectValue } = this.state,
       newAmount;
 
     if (emptyaccount) {
@@ -21,25 +22,26 @@ class App extends Component {
       return
     }
 
-    console.log(this.state.selectValue)
-
-    switch(this.state.selectValue){
+    switch (selectValue) {
       case 'withdraw':
         newAmount = totalAmount - parseInt(howmuch, 10);
+        break;
       case 'deposit':
         newAmount = totalAmount + parseInt(howmuch, 10);
+        break;
     }
     store.dispatch(updateAmount(newAmount));
   }
 
   updateSelect = (e) => {
-    console.log(e.target.value);
-    this.setState({selectValue: e.target.value});
+    let { value } = e.target;
+    this.setState({ selectValue: value });
   }
 
   render() {
     const { totalAmount, username } = store.getState();
-    let interactionType = this.state.selectValue === 'withdraw' ? 'WITHDRAW' : "DEPOSIT";
+    let { selectValue } = this.state,
+      interactionType = selectValue === 'withdraw' ? 'WITHDRAW' : "DEPOSIT";
 
     return (
       <div className="App">
@@ -50,7 +52,7 @@ class App extends Component {
           <p className="App__amount--info">Total Amount</p>
         </div>
 
-        <select value={this.state.selectValue} onChange={this.updateSelect}>
+        <select value={selectValue} onChange={this.updateSelect}>
           <option value="withdraw">Withdraw</option>
           <option value="deposit">Deposit</option>
         </select>
