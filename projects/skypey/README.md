@@ -1,5 +1,5 @@
 Where we left off:
-https://www.freecodecamp.org/news/understanding-redux-the-worlds-easiest-guide-to-beginning-redux-c695f45546f6/#building-the-chat-window
+https://www.freecodecamp.org/news/understanding-redux-the-worlds-easiest-guide-to-beginning-redux-c695f45546f6/#breaking-the-chatwindow-into-smaller-components
 
 
 
@@ -10,6 +10,7 @@ I DON'T UNDERSTAND THE FOLLOWING:
         store.dispatch(setActiveUserId(user_id));
     }
 
+- Understand what's happening in static-data.js
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

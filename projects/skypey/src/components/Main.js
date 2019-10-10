@@ -2,10 +2,8 @@ import React from "react";
 import "./Main.css";
 import Empty from "../components/Empty";
 import ChatWindow from "../components/ChatWindow";
-import store from "./../store";
 
 const Main = ({ user, activeUserId }) => {
-    let myStore = store.getState();
 
     const renderMainContent = () => {
         if (!activeUserId) {
