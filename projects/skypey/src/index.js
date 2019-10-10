@@ -6,13 +6,13 @@ import * as serviceWorker from './serviceWorker';
 import store from "./store";
 
 const fancyLog = () => {
-    console.log("%c Rendered with ? ??", "background: purple; color: #FFF");
+    console.log("Index.js - STATE");
     console.log(store.getState());
 }
 
 
 const render = () => {
-    // fancyLog();
+    fancyLog();
     return ReactDOM.render(<App />, document.getElementById("root"));
 };
 render();
