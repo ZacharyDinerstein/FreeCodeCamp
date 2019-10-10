@@ -4,13 +4,11 @@ import Sidebar from './../components/Sidebar';
 import Main from './../components/Main';
 import store from "./../store";
 
-const _ = require("lodash"),
-  { contacts, user, activeUserId  } = store.getState();
-
-
-// console.log(contacts)
+const _ = require("lodash");
 
 function App() {
+  let { contacts, user, activeUserId } = store.getState();
+
   return (
     <div className="App">
       <Sidebar contacts={_.values(contacts)} />

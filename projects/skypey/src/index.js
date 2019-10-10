@@ -12,7 +12,7 @@ const fancyLog = () => {
 
 
 const render = () => {
-    // fancyLog();
+    fancyLog();
     return ReactDOM.render(<App />, document.getElementById("root"));
 };
 render();
