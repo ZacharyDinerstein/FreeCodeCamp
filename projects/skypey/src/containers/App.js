@@ -8,7 +8,7 @@ const _ = require("lodash"),
   { contacts, user, activeUserId  } = store.getState();
 
 
-console.log(contacts)
+// console.log(contacts)
 
 function App() {
   return (
