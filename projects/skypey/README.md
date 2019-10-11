@@ -1,5 +1,5 @@
 Where we left off:
-https://www.freecodecamp.org/news/understanding-redux-the-worlds-easiest-guide-to-beginning-redux-c695f45546f6/#breaking-the-chatwindow-into-smaller-components
+https://www.freecodecamp.org/news/understanding-redux-the-worlds-easiest-guide-to-beginning-redux-c695f45546f6/#updating-the-message-state
 
 
 

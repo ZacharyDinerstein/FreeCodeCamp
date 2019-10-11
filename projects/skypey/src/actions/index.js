@@ -1,7 +1,6 @@
 import {
     SET_ACTIVE_USER_ID,
     SET_TYPING_VALUE,
-    SET_USER_MESSAGE,
     SEND_MESSAGE
 } from "../constants/action-types";
 
