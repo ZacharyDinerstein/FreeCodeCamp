@@ -4,7 +4,7 @@ import { setTypingValue } from "../actions";
 import { sendMessage } from "../actions";
 import "./MessageInput.css";
 
-const MessageInput = ({ value, userId }) => {
+const MessageInput = ({ message, userId }) => {
 
     const handleChange = e => {
       store.dispatch(setTypingValue(e.target.value));
@@ -12,12 +12,8 @@ const MessageInput = ({ value, userId }) => {
 
     const handleSubmit = (e) => {
       e.preventDefault();
-      console.log('MESSAGES-INPUT.js');
-      console.log('value');
-      console.log(value);
-      console.log('userId');
-      console.log(userId);
-      store.dispatch(sendMessage(value, userId));
+
+      store.dispatch(sendMessage(message, userId));
     };
   
     return (
@@ -25,7 +21,7 @@ const MessageInput = ({ value, userId }) => {
         <input
           className="Message__input"
           onChange={handleChange}
-          value={value}
+          value={message}
           placeholder="write a message"
         />
       </form>

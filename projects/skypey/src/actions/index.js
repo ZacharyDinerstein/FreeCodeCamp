@@ -14,11 +14,7 @@ export const setTypingValue = value => ({
     payload: value
 })
 
-export const sendMessage = (message, userId) => {
-    console.log('ACTION - message');
-    console.log(message);
-    console.log('ACTION - userId');
-    console.log(userId);
-
-    return {type: SEND_MESSAGE,payload: {message,userId}}
-}
+export const sendMessage = (message, userId) => ({
+    type: SEND_MESSAGE,
+    payload: { message, userId }
+})

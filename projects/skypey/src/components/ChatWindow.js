@@ -17,7 +17,7 @@ const ChatWindow = ({ activeUserId }) => {
         <div className="ChatWindow">
             <Header user={activeUser} />
             <Chats messages={_.values(activeMsgs)} />
-            <MessageInput value={typing} userId={activeUserId} />
+            <MessageInput message={typing} userId={activeUserId} />
         </div>
     );
 };
