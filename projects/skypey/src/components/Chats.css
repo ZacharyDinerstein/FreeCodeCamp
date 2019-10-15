@@ -16,6 +16,10 @@
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
+.Chat.is-user-msg:hover {
+  background: red;
+  cursor: pointer;
+}
 .Chat.is-user-msg {
   margin-left: auto;
   background: #2b2c33;
