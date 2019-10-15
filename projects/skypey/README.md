@@ -1,16 +1,14 @@
 Where we left off:
-https://www.freecodecamp.org/news/understanding-redux-the-worlds-easiest-guide-to-beginning-redux-c695f45546f6/#updating-the-message-state
+https://www.freecodecamp.org/news/understanding-redux-the-worlds-easiest-guide-to-beginning-redux-c695f45546f6/#tweaks-to-make-the-chat-experience-natural
 
 
 
 I DON'T UNDERSTAND THE FOLLOWING:
-- How do the parameters in theis funciton work?
-    const handleUserClick = ({ user_id }) => {
-        console.log(user_id);
-        store.dispatch(setActiveUserId(user_id));
-    }
-
 - Understand what's happening in static-data.js
+- How does each reducer know what state it returns? How does that state get assigned to that specific reducer?
+
+
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

@@ -7,7 +7,7 @@ const Main = ({ user, activeUserId }) => {
 
     const renderMainContent = () => {
         if (!activeUserId) {
-            return <Empty user={user} activeUserId={activeUserId} />;
+            return <Empty user={user} />;
         } else {
             return <ChatWindow activeUserId={activeUserId} />;
         }
