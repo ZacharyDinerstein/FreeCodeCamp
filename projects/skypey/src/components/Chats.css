@@ -16,10 +16,6 @@
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
-.Chat.is-user-msg:hover {
-  background: red;
-  cursor: pointer;
-}
 .Chat.is-user-msg {
   margin-left: auto;
   background: #2b2c33;
@@ -27,6 +23,29 @@
   border-bottom-right-radius: 0;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
+  position: relative;
+}
+.Chat.is-user-msg.hover {
+  background: #3e3f46;
+  cursor: pointer;
+}
+
+.Chat__delete-btn {
+  display: none;
+}
+
+.hover .Chat__delete-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+  height: 13px;
+  width: 13px;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  border-radius: 100%;
+  border: 1px solid white;
 }
 
 @media (min-width: 576px) {

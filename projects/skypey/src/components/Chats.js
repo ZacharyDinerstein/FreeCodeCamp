@@ -3,8 +3,21 @@ import "./Chats.css";
 
 const Chat = ({ message }) => {
   const { text, is_user_msg } = message;
+  const [hover, toggleHover] = React.useState(false);
+  
+  const handleToggleHover = () => {
+    toggleHover(!hover);
+  }
+
   return (
-    <span className={`Chat ${is_user_msg ? "is-user-msg" : ""}`}>{text}</span>
+    <div 
+      className={`Chat${is_user_msg ? " is-user-msg" : ""}${hover ? " hover" : ""}`} 
+      onMouseEnter={handleToggleHover} 
+      onMouseLeave={handleToggleHover} 
+      >
+       <span>{text}</span>
+       <div className="Chat__delete-btn">x</div>
+    </div>
   );
 };
 
