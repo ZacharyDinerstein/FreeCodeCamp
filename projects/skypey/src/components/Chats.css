@@ -26,7 +26,7 @@
   position: relative;
 }
 .Chat.is-user-msg.hover {
-  background: #3e3f46;
+  background: #2e2f36;
   cursor: pointer;
 }
 
@@ -46,6 +46,10 @@
   left: 2px;
   border-radius: 100%;
   border: 1px solid white;
+}
+
+.hover .Chat__delete-btn:hover {
+  background: #4e4f56;
 }
 
 @media (min-width: 576px) {

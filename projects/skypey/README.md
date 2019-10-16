@@ -2,6 +2,9 @@ Where we left off:
 https://www.freecodecamp.org/news/understanding-redux-the-worlds-easiest-guide-to-beginning-redux-c695f45546f6/#exercises-1
 
 
+NEXT STEP:
+- Create a reducer that deletes a message when it's clicked (TODOIST)
+
 
 I DON'T UNDERSTAND THE FOLLOWING:
 - Understand what's happening in static-data.js
